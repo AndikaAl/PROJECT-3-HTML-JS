@@ -1,0 +1,136 @@
+/** INI VERSI SAYA
+body {
+  display: flex;
+  justify-content: center;
+}
+
+ul li {
+  list-style: none;
+  display: flex;
+}
+
+.task-text {
+  flex-grow: 1;
+}
+
+li {
+  display: flex;
+  justify-content: space-around;
+}
+**/
+
+/* ======= Tampilan Halaman Utama ======= */
+body,
+html {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Halaman tidak bisa scroll */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  background-color: #f3e2d2;
+}
+
+/* ======= Container Utama ======= */
+.formContainer {
+  width: 400px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+  border: 1px solid #000;
+  text-align: center;
+  background-color: #f5f5dc;
+}
+
+/* ======= Input + Tombol ======= */
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+#search {
+  background-color: #c3a187;
+  margin-left: 0%; /*ini saya buat agar warna submit sejajar dengan atasnya*/
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#search:hover {
+  background-color: rgba(165, 134, 42, 0.34);
+}
+
+/* ======= Daftar Tugas ======= */
+#taskList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* ======= Item Tugas ======= */
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px;
+  border-radius: 5px;
+  word-wrap: break-word;
+  margin-right: 0;  
+  background-color: #f5f5dc;
+}
+
+li:hover {
+  background-color: whitesmoke;
+  border: 1px solid #000;
+  transition: transform 0.8s ease;
+}
+
+/* ======= Teks Tugas ======= */
+.task-text {
+  padding: 10px;
+  max-width: 200px;
+  word-wrap: break-word;
+  white-space: normal;
+  flex-grow: 1;
+  margin-right: 0px;
+  margin-left: 0px;
+  text-align: left; /*saya menambahkan ini agar teks yang saya inputkan sejajr ke kiri dengan diatas nya*/
+}
+
+/* ======= Tombol Ikon ======= */
+.done-button,
+.delete-button {
+  cursor: pointer;
+  margin: 0%;
+}
+
+.done-button {
+  color: green;
+}
+
+.delete-button {
+  color: red;
+  margin-right: 20px;
+}
+
+/* ======= Jika Tugas Selesai ======= */
+.complete {
+  text-decoration: line-through;
+  color: red;
+}
